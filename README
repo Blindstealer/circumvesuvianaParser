@@ -1,0 +1,23 @@
+=================
+== Description ==
+=================
+This is a parser for the web page "http://teleindicatore.eavsrl.it", which contains informations updated in real time about EAV (Ente Autonomo Volturno) trains starting from Neaples Terminal Station (Napoli - Porta nolana) to others end of line stations.
+The parser developed transforms the plain HTML content of the web page in a more flexible JSON format that can be easily used by third part apps.
+
+This parser uses nodejs and some modules are requested to function:
+	- request (which allow to get the web page)
+	- cheerio (a jquery interpeter used to transform the web page in JSON format)
+This parser was tested on Ubuntu Server 14.04
+
+===========
+== Usage ==
+===========
+Simply launch the command "nodejs parser.js". A json will be printed on the standard output
+
+================
+== Disclaimer ==
+================
+
+This software is distributed under MIT license.
+I am not associated in with EAV company which handles the website.
+I do not assume any responsability for any misuse or damage caused by this program

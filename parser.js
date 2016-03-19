@@ -12,16 +12,15 @@ request("http://teleindicatore.eavsrl.it", function(error, response, body) {
                 var parent = list[i].parent;
 		var elements = parent.children;
                 var length = elements.length;
-		var destA = elements[0].children[0].data;
-		var destB = elements[1].children[0].data
-		var destination = (destB.length > 0) ? destA + " via " + destB : destA;
+		var destination = elements[0].children[0].data;
+		var transitStation = elements[1].children[0].data.replace("(","").replace(")","");
 		var type = elements[2].children[0].data
-		var departure_time = elements[3].children[0].data
+		var departureTime = elements[3].children[0].data
                 if (length == 5) {
 			var track = elements[4].children[0].data;
-			departures.push({destination: destination, type: type, departure_time: departure_time, track: track});
+			departures.push({destination: destination, transitStation: transitStation, type: type, departureTime: departureTime, track: track});
                 } else if (length == 4) {
-			suppressions.push({destination: destination, type: type, departure_time: departure_time});
+			suppressions.push({destination: destination, type: type, departureTime: departureTime});
                 }
                 i += length;
         }

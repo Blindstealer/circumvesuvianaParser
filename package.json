@@ -1,0 +1,23 @@
+{
+  "name": "circumvesuviana_parser",
+  "version": "1.0.0",
+  "description": "A HTML to JSON converter for circumvesuviana trains",
+  "main": "parser.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antpas14/circumvesuvianaParser.git"
+  },
+  "author": "antpas14",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/antpas14/circumvesuvianaParser/issues"
+  },
+  "homepage": "https://github.com/antpas14/circumvesuvianaParser#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.83.0",
+  }
+}
